@@ -8,6 +8,7 @@
 
 
 // Creare un oggetto che descriva uno studente, con le seguenti proprietà: nome, cognome e età.
+console.log("Questo sono io:");
 var studente =
     {
         nome: "Andrea",
@@ -47,15 +48,23 @@ var studenti = [
         età: 30
     },
 ]
-console.log(studenti);
+
 
 // Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
+console.log("Studenti:");
 for (var i = 0; i < studenti.length; i++) {
     var selezione = studenti[i];
     console.log(selezione.nome + " " + selezione.cognome);
 }
 
-studenti.nome = prompt("Inserisci il tuo nome");
-studenti.cognome = prompt("inserisci il tuo cognome")
-studenti.età = parseInt(prompt("inserisci la tua età")); 
-console.log(studenti);
+
+// Dare la possibilità all'utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell'ordine: nome, cognome e età.
+
+var nuovoStudente = {
+    nome: prompt("Inserisci il tuo nome"),
+    cognome: prompt("Inserisci il tuo cognome"),
+    età: parseInt(prompt("Inserisci la tua età"))
+}
+console.log("Nuovo studente:");
+
+console.log(nuovoStudente);
